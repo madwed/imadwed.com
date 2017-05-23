@@ -1,0 +1,9 @@
+#!/bin/sh
+
+set -e
+
+cd "$(dirname "$0")/.."
+
+script/bootstrap
+
+webpack-dev-server --inline --history-api-fallback --hot --progress --colors --host 0.0.0.0
